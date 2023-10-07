@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    padding: 10px;
+    box-shadow: 0 0  30px #000000;
+    z-index: 99999;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    margin-top: -50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.kind{
+    list-style: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+.kind:hover{
+    color: #00aeda;
+}
+
+#container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 50px);
+    position: relative;
+    flex-direction: column;
+    background-color: rebeccapurple;
+    transition: background .3s;
+}
+
+.bg-button{
+    transform: translateY(-30px);
+    font-size: 50px;
+    font-weight: 900;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #212121;
+    color: #fff;
+    user-select: none;
+    text-shadow: 5px 10px 10px #000000;
+}
+
+#color{
+    color: #007f9e;
+}
+
+#click{
+    background-color: #fff4;
+    border: 2px solid #212121;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition:all .3s;
+    cursor: pointer;
+}
+#click::after{
+    content: "CLICK HERE!";
+}
+
+#click:hover{
+    background-color: #212121;
+    color: #fff;
+}

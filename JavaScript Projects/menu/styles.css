@@ -1,0 +1,157 @@
+:root{
+    --background-color:#ffffff;
+    --background-color-transparent:#1b894f;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#menu-section{
+    background-color: #085fb5;
+    position: relative;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* #menu-section::before{
+    content: "";
+    background-image: url(https://centrosantafe.com.mx/cdn/shop/articles/Restaurantes_Comida_Internacional.JPG?v=1555022012);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) brightness(1.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+
+#menu-section ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3px;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ace0d7a7;
+    backdrop-filter: blur(20px);
+    z-index: 300;
+}
+
+#menu-section ul li{
+    list-style: none;
+    margin: 0 10px;
+    border: 2px solid var(--background-color-transparent);
+    color: #000;
+    padding: 7px;
+    border-radius: 19.5px;
+    background-color: #fff;
+    transition: background-color .3s, border-color .3s, color .3s;
+    user-select: none;
+}
+
+#menu-section ul li:hover{
+    background-color: var(--background-color-transparent);
+    border-color: var(--background-color);
+    color: #fff;
+}
+
+#menu-section ul .marked{
+    background-color: var(--background-color-transparent);
+    border-color: var(--background-color);
+    color: #fff;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: 150px 300px 30px;
+    grid-template-rows: 30px 2px 122px;
+    padding: 10px;
+    max-width: auto;
+    column-gap: 5px;
+    background-color: #d7d7d7a7;
+    margin: 5px;
+    z-index: 0;
+    border-radius: 10px;
+    color: #000;
+}
+
+.product img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+    border:2px solid var(--background-color-transparent);
+    grid-row: span 3;
+    align-self: center;
+}
+
+.product h4{
+    margin: 0;
+    text-align: center;
+}
+
+.product .product-price{
+    color: rgb(0, 106, 0);
+    text-decoration: underline;
+}
+
+.product hr{
+    grid-column: -3/-1;
+    width: 80%;
+}
+
+.product p{
+    padding: 0 5px;
+    grid-column: -3/-1;
+}
+
+@media (max-width: 575px){
+    .product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 10px;
+        max-width: auto;
+        column-gap: 0;
+        height: 400px;
+        width: 100%;
+
+    }
+
+    .product-name{
+        text-align: left;
+    }
+
+    .product-price{
+        text-align: right;
+    }
+
+    .product-image{
+        grid-column: span 2;
+        align-self: center;
+        justify-self: center;
+        min-height: 75%;
+        min-width: 75%;
+        object-fit: cover;
+    }
+
+    .product hr{
+        width: 90%;
+    }
+}
